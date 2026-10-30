@@ -1,0 +1,78 @@
+{
+  "gains": {
+    "Kp_i": 6.283,
+    "Ki_i": 3947.8,
+    "Kp_v": 1.08,
+    "Ki_v": 67.9
+  },
+  "pi_only": {
+    "events": [
+      {
+        "t_event_s": 0.1,
+        "peak_dev_V": -13.31,
+        "settle_1pct_ms": 27.0
+      },
+      {
+        "t_event_s": 0.3,
+        "peak_dev_V": -12.89,
+        "settle_1pct_ms": 26.6
+      },
+      {
+        "t_event_s": 0.5,
+        "peak_dev_V": 15.11,
+        "settle_1pct_ms": 28.6
+      },
+      {
+        "t_event_s": 0.7,
+        "peak_dev_V": 13.63,
+        "settle_1pct_ms": 27.5
+      }
+    ],
+    "v_min_V": 386.69,
+    "v_max_V": 415.11
+  },
+  "with_ff": {
+    "events": [
+      {
+        "t_event_s": 0.1,
+        "peak_dev_V": -3.15,
+        "settle_1pct_ms": 0.0
+      },
+      {
+        "t_event_s": 0.3,
+        "peak_dev_V": -3.34,
+        "settle_1pct_ms": 0.0
+      },
+      {
+        "t_event_s": 0.5,
+        "peak_dev_V": 3.87,
+        "settle_1pct_ms": 0.0
+      },
+      {
+        "t_event_s": 0.7,
+        "peak_dev_V": 3.16,
+        "settle_1pct_ms": 0.0
+      }
+    ],
+    "v_min_V": 396.66,
+    "v_max_V": 403.87
+  },
+  "pack": {
+    "e_nom_kWh": 10.24,
+    "r0_ohm": 0.064,
+    "r1_ohm": 0.0384,
+    "tau1_s": 40.0
+  },
+  "round_trip_eff_pct": {
+    "1.0 kW": 99.55,
+    "2.5 kW": 98.87,
+    "5.0 kW": 97.75
+  },
+  "switched_check": {
+    "v_ripple_pp_V": 0.118,
+    "i_ripple_pp_A": 5.04,
+    "max_diff_period_avg_vs_averaged_V": 0.036,
+    "peak_dev_switched_V": -3.12,
+    "peak_dev_averaged_V": -3.15
+  }
+}

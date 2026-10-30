@@ -1,0 +1,104 @@
+{
+  "array": {
+    "p_stc_W": 5497.8,
+    "vmp_stc_V": 207.1,
+    "voc_stc_V": 249.0,
+    "isc_stc_A": 27.99
+  },
+  "boost_settling_ms": 11.42,
+  "boost_settling_ms_vs_G": {
+    "100": 92.0,
+    "200": 56.4,
+    "500": 25.9,
+    "1000": 11.4
+  },
+  "validation_200Wm2_PandO_pct": {
+    "averaged_dynamic": 99.84,
+    "quasi_static": 99.74
+  },
+  "mppt_efficiency_pct": {
+    "10 W/m2/s": {
+      "P&O (dd=0.004)": 99.88,
+      "P&O (dd=0.01)": 99.72,
+      "IncCond (dd=0.004)": 99.88,
+      "Var-step IncCond": 99.16
+    },
+    "30 W/m2/s": {
+      "P&O (dd=0.004)": 99.8,
+      "P&O (dd=0.01)": 99.69,
+      "IncCond (dd=0.004)": 99.83,
+      "Var-step IncCond": 99.15
+    },
+    "50 W/m2/s": {
+      "P&O (dd=0.004)": 99.56,
+      "P&O (dd=0.01)": 99.64,
+      "IncCond (dd=0.004)": 99.51,
+      "Var-step IncCond": 98.74
+    },
+    "100 W/m2/s": {
+      "P&O (dd=0.004)": 98.35,
+      "P&O (dd=0.01)": 99.43,
+      "IncCond (dd=0.004)": 98.3,
+      "Var-step IncCond": 98.97
+    },
+    "low light 1 W/m2/s": {
+      "P&O (dd=0.004)": 99.83,
+      "P&O (dd=0.01)": 99.62,
+      "IncCond (dd=0.004)": 99.83,
+      "Var-step IncCond": 98.27
+    },
+    "static 1000 W/m2": {
+      "P&O (dd=0.004)": 99.92,
+      "P&O (dd=0.01)": 99.78,
+      "IncCond (dd=0.004)": 99.94,
+      "Var-step IncCond": 99.62
+    },
+    "static 200 W/m2": {
+      "P&O (dd=0.004)": 99.76,
+      "P&O (dd=0.01)": 99.6,
+      "IncCond (dd=0.004)": 99.71,
+      "Var-step IncCond": 96.76
+    }
+  },
+  "startup_time_to_first_99pct_s": {
+    "P&O (dd=0.004)": 1.9,
+    "P&O (dd=0.01)": 0.9,
+    "IncCond (dd=0.004)": 1.9,
+    "Var-step IncCond": 0.5
+  },
+  "noise_sweep_200Wm2_pct": {
+    "0.00 V": {
+      "P&O (dd=0.004)": 99.96,
+      "IncCond (dd=0.004)": 100.0,
+      "Var-step IncCond": 99.99
+    },
+    "0.05 V": {
+      "P&O (dd=0.004)": 99.86,
+      "IncCond (dd=0.004)": 99.87,
+      "Var-step IncCond": 99.04
+    },
+    "0.10 V": {
+      "P&O (dd=0.004)": 99.77,
+      "IncCond (dd=0.004)": 99.75,
+      "Var-step IncCond": 97.83
+    },
+    "0.20 V": {
+      "P&O (dd=0.004)": 99.48,
+      "IncCond (dd=0.004)": 99.46,
+      "Var-step IncCond": 96.92
+    },
+    "0.40 V": {
+      "P&O (dd=0.004)": 98.97,
+      "IncCond (dd=0.004)": 99.11,
+      "Var-step IncCond": 94.3
+    }
+  },
+  "mean_efficiency_pct": {
+    "P&O (dd=0.004)": 99.59,
+    "P&O (dd=0.01)": 99.64,
+    "IncCond (dd=0.004)": 99.57,
+    "Var-step IncCond": 98.67
+  },
+  "tracker_for_annual": "P&O (dd=0.01)",
+  "eta_mppt_for_annual": 0.9964
+}

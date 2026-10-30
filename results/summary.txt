@@ -1,0 +1,68 @@
+PV array: 5.50 kWp, Vmp 207.1 V, Voc 249.0 V at STC
+Boost settling after one duty step (ms) vs W/m2: {100: 92.0, 200: 56.4, 500: 25.9, 1000: 11.4} (MPPT period 100 ms); dynamic vs quasi-static P&O at 200 W/m2: {'averaged_dynamic': 99.84, 'quasi_static': 99.74}
+MPPT tracking efficiency (%):
+  10 W/m2/s              P&O (dd=0.004): 99.88  P&O (dd=0.01): 99.72  IncCond (dd=0.004): 99.88  Var-step IncCond: 99.16
+  30 W/m2/s              P&O (dd=0.004): 99.8  P&O (dd=0.01): 99.69  IncCond (dd=0.004): 99.83  Var-step IncCond: 99.15
+  50 W/m2/s              P&O (dd=0.004): 99.56  P&O (dd=0.01): 99.64  IncCond (dd=0.004): 99.51  Var-step IncCond: 98.74
+  100 W/m2/s             P&O (dd=0.004): 98.35  P&O (dd=0.01): 99.43  IncCond (dd=0.004): 98.3  Var-step IncCond: 98.97
+  low light 1 W/m2/s     P&O (dd=0.004): 99.83  P&O (dd=0.01): 99.62  IncCond (dd=0.004): 99.83  Var-step IncCond: 98.27
+  static 1000 W/m2       P&O (dd=0.004): 99.92  P&O (dd=0.01): 99.78  IncCond (dd=0.004): 99.94  Var-step IncCond: 99.62
+  static 200 W/m2        P&O (dd=0.004): 99.76  P&O (dd=0.01): 99.6  IncCond (dd=0.004): 99.71  Var-step IncCond: 96.76
+Start-up time to first reach 99 % of Pmpp (s): P&O (dd=0.004): 1.9, P&O (dd=0.01): 0.9, IncCond (dd=0.004): 1.9, Var-step IncCond: 0.5
+
+DC bus, PI only: range 386.69..415.11 V; t=0.1s peak -13.31 V, settle 27.0 ms; t=0.3s peak -12.89 V, settle 26.6 ms; t=0.5s peak 15.11 V, settle 28.6 ms; t=0.7s peak 13.63 V, settle 27.5 ms
+DC bus, PI + power feed-forward: range 396.66..403.87 V; t=0.1s peak -3.15 V, settle 0.0 ms; t=0.3s peak -3.34 V, settle 0.0 ms; t=0.5s peak 3.87 V, settle 0.0 ms; t=0.7s peak 3.16 V, settle 0.0 ms
+Switched vs averaged DC-bus model: {'v_ripple_pp_V': 0.118, 'i_ripple_pp_A': 5.04, 'max_diff_period_avg_vs_averaged_V': 0.036, 'peak_dev_switched_V': -3.12, 'peak_dev_averaged_V': -3.15}
+Battery round trip (cells, 20-90 % SOC): {'1.0 kW': 99.55, '2.5 kW': 98.87, '5.0 kW': 97.75}
+Inverter: peak 97.56 % at 1999 W, rated 96.5 %, European 96.87 %
+
+2023: GHI 1945.7 kWh/m2, POA 2085.5, PV at bus 10037 kWh (1826 kWh/kWp), load 6778 kWh
+2024: GHI 1941.1 kWh/m2, POA 2077.1, PV at bus 9977 kWh (1815 kWh/kWp), load 6970 kWh
+2025: GHI 1954.4 kWh/m2, POA 2109.6, PV at bus 10128 kWh (1842 kWh/kWp), load 6732 kWh
+
+S3 fixed reserve tuned on 2025: 0.25; S5/S6 calibrated on 2023: {'margin': 1.1, 'derate': 0.9, 'min_coverage': 99.02, 'mean_import': 744.4175}
+Strategies 2023: grid_import_kWh | grid_export_kWh | unserved_kWh | self_sufficiency_pct | outage_energy_served_pct | battery_full_cycles
+  S0: 6144.6 | 0.0 | 633.5 | 0.0 | 0.0 | 0.0
+  S1: 3001.5 | 6571.1 | 633.5 | 46.4 | 0.0 | 0.0
+  S2: 623.9 | 3452.2 | 127.3 | 88.9 | 79.9 | 354.3
+  S3: 1015.9 | 3747.6 | 3.5 | 85.0 | 99.4 | 320.7
+  S4: 758.2 | 3466.5 | 1.8 | 88.8 | 99.7 | 352.7
+  S5: 746.8 | 3456.5 | 4.9 | 88.9 | 99.2 | 353.8
+  S6: 797.5 | 3510.0 | 0.6 | 88.2 | 99.9 | 347.7
+Strategies 2024: grid_import_kWh | grid_export_kWh | unserved_kWh | self_sufficiency_pct | outage_energy_served_pct | battery_full_cycles
+  S0: 6320.0 | 0.0 | 649.9 | 0.0 | 0.0 | 0.0
+  S1: 3230.8 | 6566.4 | 649.9 | 44.3 | 0.0 | 0.0
+  S2: 846.6 | 3461.9 | 161.3 | 85.5 | 75.2 | 352.7
+  S3: 1261.4 | 3748.9 | 6.8 | 81.8 | 99.0 | 320.1
+  S4: 1014.1 | 3478.7 | 5.2 | 85.4 | 99.2 | 350.8
+  S5: 999.4 | 3466.3 | 9.5 | 85.5 | 98.5 | 352.2
+  S6: 1053.5 | 3521.0 | 2.4 | 84.8 | 99.6 | 346.0
+Strategies 2025: grid_import_kWh | grid_export_kWh | unserved_kWh | self_sufficiency_pct | outage_energy_served_pct | battery_full_cycles
+  S0: 6103.2 | 0.0 | 628.5 | 0.0 | 0.0 | 0.0
+  S1: 2966.8 | 6666.6 | 628.5 | 46.6 | 0.0 | 0.0
+  S2: 595.5 | 3554.9 | 124.6 | 89.3 | 80.2 | 353.6
+  S3: 991.9 | 3856.9 | 3.3 | 85.2 | 99.5 | 319.2
+  S4: 721.1 | 3565.7 | 4.7 | 89.2 | 99.3 | 352.3
+  S5: 711.0 | 3560.3 | 10.8 | 89.3 | 98.3 | 352.9
+  S6: 765.8 | 3613.2 | 2.0 | 88.6 | 99.7 | 346.9
+Strategies, 4 h/day load-shedding (main year):
+  S0: 5629.4 | 0.0 | 1102.3 | 0.0 | 0.0 | 0.0
+  S1: 2676.0 | 5433.3 | 1102.3 | 43.9 | 0.0 | 0.0
+  S2: 572.1 | 2540.4 | 147.9 | 89.3 | 86.6 | 353.6
+  S3: 949.9 | 2777.9 | 30.6 | 85.4 | 97.2 | 321.0
+  S4: 882.8 | 2684.1 | 6.4 | 86.8 | 99.4 | 332.1
+  S5: 710.6 | 2547.2 | 14.2 | 89.2 | 98.7 | 352.6
+  S6: 788.4 | 2594.1 | 2.6 | 88.2 | 99.8 | 344.4
+
+DP frontier (lam, import kWh, unserved kWh): 0.0: 379.1, 622.54; 0.3: 379.3, 341.56; 0.6: 380.6, 338.25; 0.8: 382.5, 334.94; 0.9: 384.9, 332.41; 0.95: 416.3, 298.9; 1.0: 663.5, 47.83; 1.02: 710.3, 1.24; 1.05: 711.4, 0.11; 1.1: 711.4, 0.11; 1.2: 711.5, 0.04; 1.5: 711.5, 0.04; 3.0: 711.6, 0.0; 10.0: 711.6, 0.0
+Gap of each policy to the DP frontier (% more import at the same unserved energy): {'S2': 1.3, 'S3': 40.0, 'S4': 2.0, 'S5': 1.5, 'S6': 7.9}
+Outage-hours sweep (import kWh / outage energy served %):
+  0 h/day, S3 r=0.1: S2 720 / 100.0 | S3 720 / 100.0 (gap 1.2 %) | S4 720 / 100.0 (gap 1.2 %) | S5 720 / 100.0 (gap 1.2 %) | S6 720 / 100.0 (gap 1.2 %) | DP 711 (unserved 0.0)
+  2 h/day, S3 r=0.25: S2 595 / 80.18 | S3 992 / 99.48 (gap 40.0 %) | S4 721 / 99.26 (gap 2.0 %) | S5 711 / 98.27 (gap 1.5 %) | S6 766 / 99.68 (gap 7.9 %) | DP 712 (unserved 0.0)
+  4 h/day, S3 r=0.4: S2 572 / 86.58 | S3 1311 / 99.36 (gap 86.1 %) | S4 883 / 99.42 (gap 25.2 %) | S5 711 / 98.71 (gap 1.9 %) | S6 788 / 99.77 (gap 11.2 %) | DP 713 (unserved 0.01)
+  6 h/day, S3 r=0.5: S2 460 / 85.26 | S3 1332 / 99.03 (gap 91.7 %) | S4 994 / 99.14 (gap 42.6 %) | S5 704 / 98.44 (gap 2.8 %) | S6 810 / 99.51 (gap 15.2 %) | DP 714 (unserved 0.02)
+  8 h/day, S3 r=0.5: S2 458 / 88.11 | S3 1326 / 99.04 (gap 92.0 %) | S4 1114 / 99.41 (gap 59.3 %) | S5 700 / 98.5 (gap 3.1 %) | S6 1126 / 99.79 (gap 59.1 %) | DP 715 (unserved 0.04)
+Monte Carlo, 1 h extensions (100 samples): {'S2': {'coverage_mean': 81.45, 'coverage_p5': 77.31, 'import_mean': 583.0, 'unserved_mean': 159.5}, 'S3': {'coverage_mean': 98.12, 'coverage_p5': 97.04, 'import_mean': 953.0, 'unserved_mean': 16.2}, 'S4': {'coverage_mean': 96.66, 'coverage_p5': 95.04, 'import_mean': 719.0, 'unserved_mean': 28.9}, 'S5': {'coverage_mean': 95.34, 'coverage_p5': 93.76, 'import_mean': 704.0, 'unserved_mean': 40.2}, 'S6': {'coverage_mean': 98.81, 'coverage_p5': 98.16, 'import_mean': 776.0, 'unserved_mean': 10.3}, 'S3_retuned': {'r': 0.3, 'coverage_mean': 98.91, 'coverage_p5': 98.07, 'import_mean': 1105.0}, 'DP_first30': {'import_mean': 732.0, 'unserved_mean': 0.01}}
+Monte Carlo, 2 h extensions (100 samples): {'S2': {'coverage_mean': 82.65, 'coverage_p5': 79.15, 'import_mean': 602.0, 'unserved_mean': 173.8}, 'S3': {'coverage_mean': 97.46, 'coverage_p5': 96.25, 'import_mean': 977.0, 'unserved_mean': 25.5}, 'S4': {'coverage_mean': 95.97, 'coverage_p5': 94.38, 'import_mean': 741.0, 'unserved_mean': 40.5}, 'S5': {'coverage_mean': 94.85, 'coverage_p5': 93.23, 'import_mean': 726.0, 'unserved_mean': 51.7}, 'S6': {'coverage_mean': 98.27, 'coverage_p5': 97.35, 'import_mean': 804.0, 'unserved_mean': 17.3}, 'S3_retuned': {'r': 0.35, 'coverage_mean': 98.76, 'coverage_p5': 97.79, 'import_mean': 1285.0}}
+Unscheduled-outage rate sweep: {0.0: {'S2': {'coverage_mean': 81.13, 'import_mean': 573.0}, 'S3': {'coverage_mean': 98.82, 'import_mean': 953.0}, 'S4': {'coverage_mean': 97.5, 'import_mean': 706.0}, 'S5': {'coverage_mean': 96.14, 'import_mean': 691.0}, 'S6': {'coverage_mean': 99.38, 'import_mean': 762.0}}, 0.1: {'S2': {'coverage_mean': 81.82, 'import_mean': 569.0}, 'S3': {'coverage_mean': 98.44, 'import_mean': 947.0}, 'S4': {'coverage_mean': 97.09, 'import_mean': 701.0}, 'S5': {'coverage_mean': 95.75, 'import_mean': 686.0}, 'S6': {'coverage_mean': 99.0, 'import_mean': 758.0}}, 0.2: {'S2': {'coverage_mean': 82.19, 'import_mean': 563.0}, 'S3': {'coverage_mean': 98.04, 'import_mean': 939.0}, 'S4': {'coverage_mean': 96.62, 'import_mean': 696.0}, 'S5': {'coverage_mean': 95.31, 'import_mean': 680.0}, 'S6': {'coverage_mean': 98.57, 'import_mean': 753.0}}, 0.4: {'S2': {'coverage_mean': 83.03, 'import_mean': 554.0}, 'S3': {'coverage_mean': 97.4, 'import_mean': 924.0}, 'S4': {'coverage_mean': 95.91, 'import_mean': 685.0}, 'S5': {'coverage_mean': 94.69, 'import_mean': 670.0}, 'S6': {'coverage_mean': 97.92, 'import_mean': 743.0}}}
+Ageing (Wang 2011 cycle model): {'S2': {'fade_pct_year1': 3.67, 'years_to_20pct': 21.8, 'full_cycles': 353.56}, 'S3': {'fade_pct_year1': 3.5, 'years_to_20pct': 23.8, 'full_cycles': 319.16}, 'S4': {'fade_pct_year1': 3.66, 'years_to_20pct': 21.9, 'full_cycles': 352.33}, 'S5': {'fade_pct_year1': 3.66, 'years_to_20pct': 21.9, 'full_cycles': 352.94}, 'S6': {'fade_pct_year1': 3.63, 'years_to_20pct': 22.3, 'full_cycles': 346.93}}
